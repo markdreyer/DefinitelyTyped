@@ -97,7 +97,7 @@ export interface ParseConfig {
     quoteChar?: string;            // default: '"'
     header?: boolean;              // default: false
     trimHeaders?: boolean;         // default: false
-    dynamicTyping?: boolean;       // default: false
+    dynamicTyping?: boolean | Function | { [key: string]: boolean; [index: number]: boolean;}; // default: false
     preview?: number;              // default: 0
     encoding?: string;             // default: ""
     worker?: boolean;              // default: false
